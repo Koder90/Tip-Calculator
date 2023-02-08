@@ -1,11 +1,11 @@
 :root {
-  background: rgb(177, 196, 193);
+  background: #c5e4e7;
 }
 .App {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 25%;
+  width: 40%;
   margin: 0 auto;
   background: white;
   border-radius: 10px;
@@ -15,14 +15,16 @@
   display: flex;
   flex-direction: column;
   margin: 10px;
+  width: 50%;
 }
 
 .total {
-  background: #05464D;
+  background: #05464d;
+  color: white;
   margin: 10px;
   padding: 20px;
   border-radius: 5px;
-  width: 300px;
+  width: 50%;
 }
 
 .btn-group {
@@ -34,21 +36,65 @@
 }
 
 .button {
-  background: #05464D;
+  background: #05464d;
   color: white;
   font-size: medium;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-weight: bold;
   border: none;
   border-radius: 2px;
   width: 70px;
   height: 30px;
   margin: 5px;
+  cursor: pointer;
 }
 
 .input {
   border-radius: 2px;
   border: none;
   height: 25px;
-  background: rgb(235, 231, 231);
+  background: #f3fbfb;
+}
+
+.amount,
+.sum {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media all and (max-width: 1000px) {
+  .app {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .bill,
+  .total {
+    width: 40%;
+    overflow: hidden;
+  }
+  .amount,
+  .sum {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+}
+
+#amount,
+#total {
+  font-size: x-large;
+  font-weight: bolder;
+  color: #27c1ab;
+}
+
+.reset {
+  width: 100%;
+  padding: 5px 30px 5px 30px;
+  text-align: center;
+  background: #27c1ab;
+  color: black;
+  border: none;
+  border-radius: 4px;
 }
